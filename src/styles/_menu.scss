@@ -1,0 +1,106 @@
+.hamburger {
+  padding: 15px 15px;
+  margin-right: -15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  overflow: visible;
+  outline: none;
+  z-index: 1000;
+}
+
+.hamburger.is-active:hover .hamburger-inner,
+.hamburger.is-active:hover .hamburger-inner:before,
+.hamburger.is-active:hover .hamburger-inner:after {
+  background-color: #EB5757;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000;
+}
+
+.hamburger-box {
+  width: 24px;
+  height: 10px;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.hamburger-inner {
+  transition: 0.3s ease;
+  display: block;
+  //top: 50%;
+  //margin-top: -2px;
+}
+
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  display: block;
+  transition: 0.3s ease;
+  width: 24px;
+  height: 1px;
+  background-color: #202020;
+  border-radius: 1px;
+  position: absolute;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: 0px;
+}
+
+.hamburger-inner::after {
+  bottom: 0px;
+}
+
+.hamburger:hover .hamburger-inner,
+.hamburger:hover .hamburger-inner:before,
+.hamburger:hover .hamburger-inner:after {
+  background-color: #EB5757;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner:after,
+.hamburger.is-active .hamburger-inner:before {
+  background-color: #202020;
+}
+
+.hamburger--3dxy .hamburger-box {
+  perspective: 80px;
+}
+
+.hamburger--3dxy .hamburger-inner {
+  transition: transform 0.15s cubic-bezier(0.645, 0.045, 0.355, 1),
+  background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dxy .hamburger-inner::before,
+.hamburger--3dxy .hamburger-inner::after {
+  transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.hamburger--3dxy.is-active .hamburger-inner {
+  background-color: transparent !important;
+  transform: rotateX(180deg) rotateY(180deg);
+}
+
+.hamburger--3dxy.is-active .hamburger-inner::before {
+  transform: translate3d(0, -5px, 0) rotate(45deg);
+}
+
+.hamburger--3dxy.is-active .hamburger-inner::after {
+  transform: translate3d(0, -4px, 0) rotate(-45deg);
+}

@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: $text;
-  font-family: "Mulish", sans-serif;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -16,27 +19,21 @@ h3,
 h4,
 h5,
 h6 {
-  color: $heading;
-  margin-top: 0;
   text-align: center;
+  font-family: "Rubik", sans-serif;
 }
 
 a {
-  color: $link;
   text-decoration: none;
-
-  &:hover {
-    color: $link-darkened;
-  }
 }
 
-pre {
-  overflow-x: scroll;
+ul {
+  list-style: none;
+}
+
+.container {
   width: 100%;
-}
-
-p {
-  line-height: 1.6em;
-  margin: 0 auto 1em auto;
-  max-width: 800px;
+  max-width: 1312px;
+  padding: 0 16px;
+  margin: 0 auto;
 }
