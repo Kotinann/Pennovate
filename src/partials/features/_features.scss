@@ -1,4 +1,11 @@
 .features {
+  padding-top: 84px;
+  background: #F8F8F8;
+  padding-bottom: 80px;
+  background-image: url("url:./assets/images/bg-features.png");
+  background-repeat: no-repeat;
+  background-position: 50% 77%;
+  background-size: 1900px;
 
   &__wrap {
 
@@ -20,6 +27,7 @@
     background:#052484;
     margin: auto;
     border-radius: 5px;
+    margin-bottom: 40px;
   }
 
   &__subtitle {
@@ -29,37 +37,50 @@
     font-size: 24px;
     line-height: 1.2;
     color: #7D7987;
-    margin: 46px auto 30px;
+    margin: 0 auto 100px;
   }
 
   &__block-wrap {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    row-gap: 36px;
+    column-gap: 36px;
   }
 
   &__block {
-    width: 545px;
-    height: 290px;
-    margin: 40px 30px 0 30px;
+    width: 100%;
+    max-width: 545px;
+    display: grid;
+    grid-template-areas:
+            "h i"
+            "t i";
+    //grid-template-rows: 50px 1fr 30px;
+    //grid-template-columns: 150px 1fr;
+    padding: 40px 40px 50px 40px;
     justify-content: space-between;
     box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
     border-radius: 20px;
     background: $white;
   }
 
+  &__block-head {
+    display: flex;
+    align-items: center;
+    grid-area: h;
+    margin-bottom: 20px;
+  }
+
   &__block-number {
     display: inline-block;
     font-weight: 700;
     font-size: 100px;
+    line-height: 1;
     color: #001F7E;
-    padding: 0 18px 0 44px;
-
+    margin-right: 18px;
   }
 
   &__block-title {
-    width: 240px;
-    height: auto;
     display: inline-block;
     font-weight: 600;
     font-size: 22px;
@@ -68,19 +89,23 @@
   }
 
   &__block-img{
-    float: right;
-    padding: 54px 18px 0px 5px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    grid-area: i;
+    width: 100%;
+    max-width: 175px;
 
     img {
-      width: 155px;
-
+      display: block;
+      width: 100%;
+      height: auto;
     }
   }
 
   &__block-text {
     display: inline-block;
-    width: 350px;
-    padding-left: 52px;
+    grid-area: t;
     color: #7D7987;
     font-size: 18px;
   }
@@ -92,6 +117,7 @@
   }
 
   &__button {
+    display: inline-block;
     background: #001F7E;
     box-shadow: 0px 4px 30px #A5BAFC;
     border-radius: 38px;
@@ -103,6 +129,7 @@
     color: $white;
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+    margin-bottom: 25px;
 
     &:hover {
       background-color: #A5BAFC;
@@ -114,6 +141,5 @@
     font-size: 18px;
     line-height: 1.2;
     color: #052484;
-    padding-top: 14px;
   }
 }

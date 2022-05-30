@@ -1,0 +1,70 @@
+.footer {
+  padding-top: 180px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__col-first {
+
+    p {
+      width: 430px;
+      padding-top: 26px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #4F5665;
+    }
+  }
+
+  &__social {
+
+
+  }
+
+  &__social_link {
+
+     svg {
+
+    }
+  }
+
+  &_col-first-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #AFB5C0;
+
+  }
+
+  &__col-second {
+
+  }
+
+  &__nav-title {
+    text-align: left;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.6;
+    padding-bottom: 20px;
+  }
+
+  &__nav {
+
+  }
+
+  &__nav-list {
+    padding-bottom: 10px;
+
+    a {
+      color: #4F5665;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: $link-hover;
+      }
+    }
+  }
+
+}
