@@ -37,7 +37,6 @@
     opacity: 1;
   }
 
-
   .header-nav-mob__wrapp {
     position: relative;
     display: flex;
@@ -50,12 +49,9 @@
     transform: translateX(100%);
   }
 
-
-
   .header-nav-mob.active .header-nav-mob__wrapp {
     transform: translateX(0);
   }
-
 
   .toggle-menu--close {
     position: relative;
@@ -94,7 +90,6 @@
 
   .header-nav-mob__list li {
     margin-bottom: 21px;
-
   }
 
   .header-nav-mob__link {
